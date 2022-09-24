@@ -6,7 +6,7 @@
 html,body{
     width: 100vw;
     height: 100vh;
-    font-family: inconsol;
+    font-family: inconsol, 'Courier New', Courier, monospace;
 }
 
 html,body,h1,div,img,p{
