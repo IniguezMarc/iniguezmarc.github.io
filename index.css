@@ -1,44 +1,162 @@
 @font-face {
-    font-family: inconsol;
-    src: url(assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf);
+  font-family: inconsol;
+  src: url(assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf);
 }
 
-html,body{
-    width: 100vw;
-    height: 100vh;
-    font-family: inconsol, 'Courier New', Courier, monospace;
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: inconsol, "Courier New", Courier, monospace;
 }
 
-html,body,h1,div,img,p{
-   margin: 0;
-   padding: o;
+html,
+body,
+h1,
+div,
+img,
+p {
+  margin: 0;
+  padding: o;
 }
 
-body{
-    background-color:  rgb(251, 253, 203);
+body {
+  background-color: rgb(251, 253, 203);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
-header{
-    height: 150px;
-    padding-top: 50px;
-    text-align: center;
+header {
+  height: auto;
+  padding-top: 50px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
-.text{
-    position: relative;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+
+.title {
+  font-size: clamp(1rem, 8.5vw, 4rem);
 }
-.projects{
-    position: relative;
-    width: 80%;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+
+.subTitle {
+  font-size: clamp(1rem, 4vw, 2rem);
+  text-align: left;
 }
-.project{
-    position: relative;
-    display: inline-block;
-    margin: 20px;
+
+.box {
+  background-color: rgb(249, 249, 219);
+  width: 80%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.profileImage {
+  display: block;
+  width: 40vw;
+  height: 40vw;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.text {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.projects {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.project {
+  display: inline-block;
+  margin: 20px;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  height: 50px;
+  padding-bottom: 20px;
+}
+
+.element {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.element:hover {
+  border: 2px solid #000;
+  font-weight: bolder;
+}
+
+.linkedin {
+  bottom: 20px;
+  right: 50px;
+}
+
+.gmail {
+  bottom: 20px;
+  right: 200px;
+}
+
+#gmailModule{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 248, 255, 0.824);    
+    z-index: 1;
+}
+
+#gmailModule div{
+background-color: rgb(249, 249, 219);
+  width: 80%;
+  max-width: 700px;
+  height: 50%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+z-index: 2;
+
+}
+
+.icon {
+  width: 20px;
+  margin-left: 5px;
+  vertical-align: bottom;
 }
