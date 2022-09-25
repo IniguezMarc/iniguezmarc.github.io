@@ -166,9 +166,22 @@ a {
   position: relative;
   color: #000000;  
   font-size: 3rem;
-  
   margin-left: 50px;
 }
+
+@media (max-width: 420px) {
+  .projecTitle {
+    margin-left: 30px;
+    transition: 1s;
+  }
+  }
+
+  @media (max-width: 350px) {
+    .projecTitle {
+      margin-left: 10px;
+      transition: 1s;
+    }
+    }
 
 .wsProject{
   position: relative;
@@ -249,6 +262,12 @@ footer {
   margin-left: 5px;
   vertical-align: bottom;
 }
+
+@media (max-width: 1000px) {
+  .gmail {
+    display: none;
+  }
+  }
 
 @media (max-width: 350px) {
   .linkedin {
