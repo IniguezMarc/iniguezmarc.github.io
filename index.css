@@ -8,6 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   max-width: 100%;
+  min-width: 280px;
   overflow-x: hidden;
   font-family: inconsol, "Courier New", Courier, monospace;
 }
@@ -29,9 +30,20 @@ body {
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
   height: auto;
   padding-top: 50px;
@@ -41,8 +53,13 @@ header {
   margin-bottom: 50px;
 }
 
+a {
+  color: black;
+  text-decoration: dashed; /* no underline */
+}
+
 .title {
-  font-size: clamp(1rem, 8.5vw, 4rem);
+  font-size: clamp(1rem, 7vw, 4rem);
 }
 
 .subTitle {
@@ -65,12 +82,16 @@ header {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.v-align {
+  vertical-align: bottom;
+}
+
 .profileImage {
   display: block;
   width: 40vw;
   height: 40vw;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: auto;
@@ -84,17 +105,114 @@ header {
   margin-right: auto;
   text-align: center;
 }
-.projects {
-  width: 80%;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+
+.profesionalText {
+  display: inline-block;
+  width: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
 }
-.project {
+
+#fullStackImg {
   display: inline-block;
-  margin: 20px;
+  width: 40vw;
+  height: auto;
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+  vertical-align: text-bottom;
+  margin-bottom: 40px;
 }
+
+@media (max-width: 769px) {
+  #fullStackImg {
+    margin-bottom: 70px;
+    transition: 1s;
+  }
+}
+
+@media (max-width: 749px) {
+  .v-align {
+    vertical-align: none;
+  }
+
+  #fullStackImg {
+    display: block;
+    height: 40vw;
+    max-width: 170px;
+    max-height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .profesionalText {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+#technologies{
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
+.projecTitle {
+  position: relative;
+  color: #000000;  
+  font-size: 3rem;
+  
+  margin-left: 50px;
+}
+
+.wsProject{
+  position: relative;
+  height: 50px;
+}
+
+.wsProject::before{
+  content: "";
+  background-image:url("/assets/images/wsBackgrownd.png");
+  background-size: 50px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.15;
+}
+
+
+.wsProject:hover{
+  transform: scale(1.01);
+  transition: 0.1s;
+}
+
+.wsProject:hover:before{
+  background-size: 25px;
+  opacity: 0.5;
+  transition: 3s;
+  transition-timing-function: ease-out;
+}
+
+.wsProject:not(:hover){
+  transform: scale(1);
+  transition: 0.1s;
+}
+
+.wsProject:not(:hover):before{
+  background-size: 50px;
+  opacity: 0.15;
+  transition: 2s;
+  transition-timing-function: ease-in;
+}
+
+
 
 footer {
   position: relative;
@@ -104,7 +222,7 @@ footer {
   padding-bottom: 20px;
 }
 
-.element {
+.footerElement {
   position: absolute;
   width: 100px;
   height: 20px;
@@ -112,7 +230,7 @@ footer {
   border: 1px solid #000;
 }
 
-.element:hover {
+.footerElement:hover {
   border: 2px solid #000;
   font-weight: bolder;
 }
@@ -126,37 +244,139 @@ footer {
   bottom: 20px;
   right: 200px;
 }
-
-#gmailModule{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(240, 248, 255, 0.824);    
-    z-index: 1;
-}
-
-#gmailModule div{
-background-color: rgb(249, 249, 219);
-  width: 80%;
-  max-width: 700px;
-  height: 50%;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  border-radius: 2%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-z-index: 2;
-
-}
-
 .icon {
   width: 20px;
   margin-left: 5px;
   vertical-align: bottom;
+}
+
+@media (max-width: 350px) {
+  .linkedin {
+   display: none;
+  }
+  
+  .gmail {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .linkedin {
+    right: 20px;
+    transition: 1s;
+  }
+  
+  .gmail {
+    right: 160px;
+    transition: 1s;
+  }
+  
+}
+
+/*###### SCROLL BAR ######*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(117, 117, 100, 0.782);
+  border-radius: 800%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(117, 117, 100);
+}
+
+@media (max-width: 500px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+
+.rainElement{
+  position: absolute;
+  width: 20px;
+  left: -20px;
+}
+
+@keyframes rainAnimation {
+  0% {
+    opacity: 0.5;
+    left: -20px;
+  }
+  100% {
+    opacity: 0;
+    left: 1000px;
+  }
+}
+
+@media (max-width: 3000px) {
+
+  @keyframes rainAnimation {
+    0% {
+      opacity: 0.5;
+      left: -20px;
+    }
+    100% {
+      opacity: 0;
+      left: 600px;
+    }
+  }
+}
+
+@media (max-width: 2000px) {
+
+  @keyframes rainAnimation {
+    0% {
+      opacity: 0.5;
+      left: -20px;
+    }
+    100% {
+      opacity: 0;
+      left: 200px;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+
+  @keyframes rainAnimation {
+    0% {
+      opacity: 0.5;
+      left: -20px;
+    }
+    100% {
+      opacity: 0;
+      left: 70px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .rainElement{
+    display: none;
+  }
+  
+  @keyframes rainAnimation {
+    0% {
+      opacity: 0;
+      left: 0px;
+    }
+    100% {
+      opacity: 0;
+      left: 0px;
+    }
+  }
 }

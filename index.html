@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="index.js" defer></script>
     <title>My page</title>
-    <link rel="shortcut icon" href="assets/code-icon.webp" type="image/x-icon">
-</head>
-<body>
-    <nav>
+    <link
+      rel="shortcut icon"
+      href="assets/code-icon.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav></nav>
+    <header>
+      <h1 class="title">Marc Iñiguez Barbero</h1>
+      <h3 class="subTitle">Web developer</h3>
+    </header>
+    <div class="box">
+      <img
+        class="profileImage"
+        src="assets/images/img_perfil.jpg"
+        alt="profileImage"
+      />
+      <figcaption class="text personalText">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </figcaption>
+    </div>
+    <div class="box v-align">
+      <img
+        id="fullStackImg"
+        src="assets/images/How-to-become-a-Full-Stack-Web-Developer--451x300.png"
+        alt=""
+      />
 
-    </nav>
-        <header>
-            <h1 class="title">Marc Iñiguez Barbero</h1>
-            <h3 class="subTitle">Web developer</h3>
-        </header>
-        <div class="box ">
-            <img class="profileImage" src="assets/images/img_perfil.jpg" alt="profileImage">
-            <figcaption class="text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption>
+      <figcaption class="text profesionalText">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </figcaption>
+    </div>
+    <div class="box">
+      <table id="technologies">
+        <tr>
+          <td>Html <img class="icon" src="assets/icons/html.png" alt="" /></td>
+          <td>Css <img class="icon" src="assets/icons/css.png" alt="" /></td>
+          <td>
+            JavaScript <img class="icon" src="assets/icons/js.png" alt="" />
+          </td>
+        </tr>
+        <tr>
+          <td>Java <img class="icon" src="assets/icons/java.png" alt="" /></td>
+          <td>PhP <img class="icon" src="assets/icons/php.png" alt="" /></td>
+          <td>Sql <img class="icon" src="assets/icons/sql.png" alt="" /></td>
+        </tr>
+        <tr>
+          <td>
+            Node.js <img class="icon" src="assets/icons/nodejs.png" alt="" />
+          </td>
+          <td>
+            Angular <img class="icon" src="assets/icons/angular.png" alt="" />
+          </td>
+          <td>
+            React <img class="icon" src="assets/icons/react.png" alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <a href="https://iniguezmarc.github.io/raw_react/">
+      <div class="box wsProject">
+        <span class="projecTitle">WorkShop</span>
+    </div>
+    </a>
+
+    <footer>
+      <a href="https://www.linkedin.com/in/iniguezmarz">
+        <div class="footerElement linkedin">
+          <span>Linked</span
+          ><img class="icon" src="assets/icons/linkedin.png" alt="" />
         </div>
-        <div class="box ">
-            <a class="project " href="https://iniguezmarc.github.io/raw_react/">React Basics</a> 
+      </a>
+      <a
+        href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=miniguezbarbero@gmail.com"
+      >
+        <div class="footerElement gmail" onclick="openGmailModule()">
+          <span>Gmail</span
+          ><img class="icon" src="assets/icons/gmail.png" alt="" />
         </div>
-        <div class="box ">
-            <a class="project" href="https://iniguezmarc.github.io/raw_react/">React Basics</a> 
-        </div>
-        <div class="box ">
-            <a class="project" href="https://iniguezmarc.github.io/raw_react/">React Basics</a> 
-        </div>
-        <footer>
-            <a href="https://www.linkedin.com/in/iniguezmarz">
-                <div class="element linkedin">
-                    <span>Linked</span><img class="icon" src="assets/images/LinkedIn_logo_initials.png" alt="">
-                </div>
-            </a>
-            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=miniguezbarbero@gmail.com">
-                <div class="element gmail" onclick="openGmailModule()" >
-                    <span>Gmail</span><img class="icon" src="assets/images/281769.png" alt="">
-                </div>
-            </a>
-                
-           
-            
-         
-        </footer>
-   
-   
-</body>
+      </a>
+    </footer>
+  </body>
 </html>
