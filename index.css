@@ -156,11 +156,42 @@ a {
   }
 }
 
-#technologies{
-  width: 100%;
-  height: 200px;
-  text-align: center;
+.technologies{
+  position: relative;
+  padding: 20px;
+  text-align: left;
+  align-items: center;
 }
+
+.tech{
+  position: relative;
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 22%;
+}
+
+@media (max-width: 753px) {
+  .tech{
+    width: 35%;
+    padding-left: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: 2s;
+  }
+  }
+
+  @media (max-width: 506px) {
+    .tech{
+      width: fit-content;
+      display: block;
+      font-size: large;
+      transition: 2s;
+    }
+    }
 
 .projecTitle {
   position: relative;
