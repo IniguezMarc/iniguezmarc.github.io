@@ -67,6 +67,24 @@ a {
   text-align: left;
 }
 
+.sectionTitle{
+  font-size: clamp(1rem, 4vw, 2rem);
+  text-align: left;
+  width: 80%;
+  max-width: 700px;
+  margin-top: 200px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.introductionText{
+  width: 80%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
 .box {
   background-color: rgb(249, 249, 219);
   width: 80%;
@@ -80,6 +98,16 @@ a {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.box:hover{
+  transform: scale(1.03);
+  transition: 1s;
+}
+
+.box:not(:hover){
+  transform: scale(1);
+  transition: 1s;
 }
 
 .v-align {
@@ -233,8 +261,8 @@ a {
 
 
 .wsProject:hover{
-  transform: scale(1.01);
-  transition: 0.1s;
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 .wsProject:hover:before{
