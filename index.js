@@ -1,16 +1,23 @@
-$(document).ready(function () {
-  fadeIn();
-  rain();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }else{
+      entry.target.classList.remove('show');
+    }
+  });
 });
 
-function fadeIn() {
-  $(".box").fadeIn(3000);
-}
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+rain();
 function rain() {
   const numRain = 3;
   const rainItems = [
@@ -38,3 +45,5 @@ function rain() {
     }
   });
 }
+
+
