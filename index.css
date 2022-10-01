@@ -67,17 +67,17 @@ a {
   text-align: left;
 }
 
-.sectionTitle{
+.sectionTitle {
   font-size: clamp(1rem, 4vw, 2rem);
   text-align: left;
   width: 80%;
   max-width: 700px;
   margin-top: 200px;
- margin-left: auto;
- margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.introductionText{
+.introductionText {
   width: 80%;
   max-width: 700px;
   margin-left: auto;
@@ -100,12 +100,12 @@ a {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.box:hover{
+.box:hover {
   transform: scale(1.03);
   transition: 1s;
 }
 
-.box:not(:hover){
+.box:not(:hover) {
   transform: scale(1);
   transition: 1s;
 }
@@ -184,14 +184,14 @@ a {
   }
 }
 
-.technologies{
+.technologies {
   position: relative;
   padding: 20px;
   text-align: left;
   align-items: center;
 }
 
-.tech{
+.tech {
   position: relative;
   display: inline-block;
   padding-left: 5%;
@@ -202,7 +202,7 @@ a {
 }
 
 @media (max-width: 753px) {
-  .tech{
+  .tech {
     width: 35%;
     padding-left: 7%;
     margin-left: auto;
@@ -210,20 +210,26 @@ a {
     text-align: center;
     transition: 2s;
   }
-  }
+}
 
-  @media (max-width: 506px) {
-    .tech{
-      width: fit-content;
-      display: block;
-      font-size: large;
-      transition: 2s;
-    }
-    }
+@media (max-width: 506px) {
+  .tech {
+    width: fit-content;
+    display: block;
+    font-size: large;
+    transition: 2s;
+  }
+}
+
+.projectLink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 .projecTitle {
   position: relative;
-  color: #000000;  
+  color: #000000;
   font-size: 3rem;
   margin-left: 50px;
 }
@@ -233,23 +239,23 @@ a {
     margin-left: 30px;
     transition: 1s;
   }
+}
+
+@media (max-width: 350px) {
+  .projecTitle {
+    margin-left: 10px;
+    transition: 1s;
   }
+}
 
-  @media (max-width: 350px) {
-    .projecTitle {
-      margin-left: 10px;
-      transition: 1s;
-    }
-    }
-
-.wsProject{
+.wsProject {
   position: relative;
   height: 50px;
 }
 
-.wsProject::before{
+.wsProject::before {
   content: "";
-  background-image:url("/assets/images/wsBackgrownd.png");
+  background-image: url("/assets/images/wsBackgrownd.png");
   background-size: 50px;
   position: absolute;
   top: 0px;
@@ -259,32 +265,29 @@ a {
   opacity: 0.15;
 }
 
-
-.wsProject:hover{
+.wsProject:hover {
   transform: scale(1.03);
   transition: 0.3s;
 }
 
-.wsProject:hover:before{
+.wsProject:hover:before {
   background-size: 25px;
   opacity: 0.5;
   transition: 3s;
   transition-timing-function: ease-out;
 }
 
-.wsProject:not(:hover){
+.wsProject:not(:hover) {
   transform: scale(1);
   transition: 0.1s;
 }
 
-.wsProject:not(:hover):before{
+.wsProject:not(:hover):before {
   background-size: 50px;
   opacity: 0.15;
   transition: 2s;
   transition-timing-function: ease-in;
 }
-
-
 
 footer {
   position: relative;
@@ -326,17 +329,16 @@ footer {
   .gmail {
     display: none;
   }
-  }
+}
 
 @media (max-width: 350px) {
   .linkedin {
-   display: none;
+    display: none;
   }
-  
+
   .gmail {
     display: none;
   }
-  
 }
 
 @media (max-width: 500px) {
@@ -344,19 +346,18 @@ footer {
     right: 20px;
     transition: 1s;
   }
-  
+
   .gmail {
     right: 160px;
     transition: 1s;
   }
-  
 }
 
 /*###### SCROLL BAR ######*/
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 /* Track */
@@ -375,14 +376,14 @@ footer {
   background: rgb(117, 117, 100);
 }
 
+
 @media (max-width: 500px) {
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar-thumb {
     width: 5px;
   }
 }
 
-
-.rainElement{
+.rainElement {
   position: absolute;
   width: 20px;
   left: -20px;
@@ -400,7 +401,6 @@ footer {
 }
 
 @media (max-width: 3000px) {
-
   @keyframes rainAnimation {
     0% {
       opacity: 0.5;
@@ -414,7 +414,6 @@ footer {
 }
 
 @media (max-width: 2000px) {
-
   @keyframes rainAnimation {
     0% {
       opacity: 0.5;
@@ -428,7 +427,6 @@ footer {
 }
 
 @media (max-width: 1250px) {
-
   @keyframes rainAnimation {
     0% {
       opacity: 0.5;
@@ -442,11 +440,10 @@ footer {
 }
 
 @media (max-width: 1000px) {
-
-  .rainElement{
+  .rainElement {
     display: none;
   }
-  
+
   @keyframes rainAnimation {
     0% {
       opacity: 0;
