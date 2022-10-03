@@ -1,16 +1,15 @@
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting){
-      entry.target.classList.add('show');
-    }else{
-      entry.target.classList.remove('show');
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
     }
   });
 });
 
-const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
 function randomIntFromInterval(min, max) {
@@ -46,4 +45,17 @@ function rain() {
   });
 }
 
+const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
 
+function switchTheme(e) {
+    if (e.target.checked) {
+      console.log('theme dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    else {
+      console.log('theme light');
+        document.documentElement.setAttribute('data-theme', 'light');
+    }    
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);

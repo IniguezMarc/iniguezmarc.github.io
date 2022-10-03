@@ -66,6 +66,12 @@ header {
   margin-bottom: 50px;
 }
 
+section{
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
 a {
   color: black;
   text-decoration: dashed; /* no underline */
@@ -86,15 +92,11 @@ a {
   width: 80%;
   max-width: 700px;
   margin-top: 200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .introductionText {
   width: 80%;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 100px;
 }
 
@@ -102,8 +104,6 @@ a {
   background-color: rgb(249, 249, 219);
   width: 80%;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 100px;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -294,8 +294,7 @@ a {
   transform: scale(1);
   transition: 0.1s;
 }
-
-.wsProject:not(:hover):before {
+live .wsProject:not(:hover):before {
   background-size: 50px;
   opacity: 0.15;
   transition: 2s;
@@ -389,7 +388,6 @@ footer {
   background: rgb(117, 117, 100);
 }
 
-
 @media (max-width: 500px) {
   ::-webkit-scrollbar-thumb {
     width: 5px;
@@ -413,18 +411,6 @@ footer {
   }
 }
 
-@media (max-width: 3000px) {
-  @keyframes rainAnimation {
-    0% {
-      opacity: 0.5;
-      left: -20px;
-    }
-    100% {
-      opacity: 0;
-      left: 600px;
-    }
-  }
-}
 
 @media (max-width: 2000px) {
   @keyframes rainAnimation {
@@ -434,12 +420,12 @@ footer {
     }
     100% {
       opacity: 0;
-      left: 200px;
+      left: 300px;
     }
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1800px) {
   @keyframes rainAnimation {
     0% {
       opacity: 0.5;
@@ -447,7 +433,20 @@ footer {
     }
     100% {
       opacity: 0;
-      left: 70px;
+      left: 130px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  @keyframes rainAnimation {
+    0% {
+      opacity: 0.5;
+      left: -20px;
+    }
+    100% {
+      opacity: 0;
+      left: 100px;
     }
   }
 }
@@ -467,4 +466,73 @@ footer {
       left: 0px;
     }
   }
+}
+
+nav{
+  text-align: right;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
