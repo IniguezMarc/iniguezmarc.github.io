@@ -3,6 +3,40 @@
   src: url(assets/fonts/Inconsolata/Inconsolata-VariableFont_wdth\wght.ttf);
 }
 
+:root {
+  --font-color: black;
+  --bg-color:  rgb(251, 253, 203);
+  --box-bg-color:rgb(249, 249, 219);
+  --box-shadow1: rgba(0, 0, 0, 0.25);
+  --box-shadow2: rgba(0, 0, 0, 0.12);
+  --box-shadow3:rgba(0, 0, 0, 0.12);
+  --box-shadow4: rgba(0, 0, 0, 0.17);
+  --box-shadow5:rgba(0, 0, 0, 0.09);
+  --scrollBar-track:rgba(0, 0, 0, 0);
+  --scrollBar-handler:rgba(117, 117, 100, 0.782);
+  --scrollBar-handler-hover:rgb(117, 117, 100);
+  --switch-bg-color:#ccc;
+  --switch-toggle-color:white;
+  --switch-bg-checked:#2196F3;
+}
+
+[data-theme="dark"] {
+  --font-color: white;
+  --bg-color:  #20252C;
+  --box-bg-color:#282C34;
+  --box-shadow1: rgba(0, 0, 0, 0.25);
+  --box-shadow2: rgba(0, 0, 0, 0.12);
+  --box-shadow3:rgba(0, 0, 0, 0.12);
+  --box-shadow4: rgba(0, 0, 0, 0.17);
+  --box-shadow5:rgba(0, 0, 0, 0.09);
+  --scrollBar-track:rgba(0, 0, 0, 0);
+  --scrollBar-handler:rgba(117, 117, 100, 0.782);
+  --scrollBar-handler-hover:rgb(117, 117, 100);
+  --switch-bg-color:#ccc;
+  --switch-toggle-color:white;
+  --switch-bg-checked:#2196F3;
+}
+
 html,
 body {
   width: 100vw;
@@ -11,6 +45,7 @@ body {
   min-width: 280px;
   overflow-x: hidden;
   font-family: inconsol, "Courier New", Courier, monospace;
+  color: var(--font-color);
 }
 
 html,
@@ -24,7 +59,8 @@ p {
 }
 
 body {
-  background-color: rgb(251, 253, 203);
+  display: grid;
+  background-color: var(--bg-color);
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -46,8 +82,7 @@ body {
 
 .hidden {
   opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
+  filter: blur(8px);
   transition: all 1s;
 }
 
@@ -73,7 +108,7 @@ section{
 }
 
 a {
-  color: black;
+  color: var(--font-color);
   text-decoration: dashed; /* no underline */
 }
 
@@ -101,7 +136,7 @@ a {
 }
 
 .box {
-  background-color: rgb(249, 249, 219);
+  background-color: var( --box-bg-color);
   width: 80%;
   max-width: 700px;
   margin-bottom: 100px;
@@ -242,7 +277,7 @@ a {
 
 .projecTitle {
   position: relative;
-  color: #000000;
+  color: var(--font-color);
   font-size: 3rem;
   margin-left: 50px;
 }
@@ -294,7 +329,7 @@ a {
   transform: scale(1);
   transition: 0.1s;
 }
-live .wsProject:not(:hover):before {
+ .wsProject:not(:hover):before {
   background-size: 50px;
   opacity: 0.15;
   transition: 2s;
@@ -314,11 +349,11 @@ footer {
   width: 100px;
   height: 20px;
   padding: 10px;
-  border: 1px solid #000;
+  border: 1px solid var(--font-color);
 }
 
 .footerElement:hover {
-  border: 2px solid #000;
+  border: 2px solid var(--font-color);
   font-weight: bolder;
 }
 
@@ -470,6 +505,13 @@ footer {
 
 nav{
   text-align: right;
+  height: 0;
+}
+
+@media (max-width: 1000px){
+  nav {
+ display: none;
+}
 }
 
 /* The switch - the box around the slider */
