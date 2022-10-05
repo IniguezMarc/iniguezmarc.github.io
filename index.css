@@ -578,3 +578,47 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/*typing animation*/
+
+#typing-animation{
+  position: absolute;
+  top: -200px;
+  border-right: solid 3px var(--font-color);
+  opacity: 0.1;
+  white-space: nowrap;
+  width:fit-content;
+  height: 35px;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 35px;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  transform: rotate(-90deg);
+}
+/*
+/* Animation */
+#typing-animation {
+  animation: animated-text 44s steps(22,end) 1s 1 normal both,
+             animated-cursor 1s steps(22,end) infinite;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  0%{width: 0; top: 200px;
+    right: 200px;}
+  50%{width:420px; top:420px;
+    right: 0px;
+  }
+  100%{width: 0; top: 200px;
+    right: 200px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: var(--font-color);}
+  to{border-right-color: transparent;}
+}
