@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,14 +16,15 @@
   </head>
   <body>
     <nav class="hidden">
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
+      <div class="themeSwitch">
+        <img src="assets/icons/bulbOn.png" alt="bulb">
+      </div>
     </nav>
     <header class="hidden">
-      <h1 class="title">Marc Iñiguez Barbero</h1>
-      <h3 class="subTitle">Web developer</h3>
+      <h1 typed class="title hidden ">Marc Iñiguez Barbero</h1>
+      <div style="width: fit-content;">
+        <h3 typed style="animation-delay:1.2s;" class="subTitle hidden">Web developer</h3>
+      </div>
     </header>
     <section>
       <div class="box hidden" id="box1">
@@ -66,7 +67,11 @@
 
 
     <section class="hidden">
-      <h2 class="sectionTitle">Technologies</h2>
+      <div class="sectionTitle-container">
+        <div style="width:fit-content ;">
+          <h2 typed class="sectionTitle hidden">Technologies</h2>
+        </div>
+      </div>
       <p class="introductionText">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -106,7 +111,11 @@
     </section>
 
     <section class="hidden">
-      <h2 class="sectionTitle">Technologies</h2>
+      <div class="sectionTitle-container">
+        <div style="width:fit-content ;">
+          <h2 typed class="sectionTitle hidden">Technologies</h2>
+        </div>
+      </div>
       <p class="introductionText">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -136,8 +145,5 @@
         </div>
       </a>
     </footer>
-
-  <h1 id="typing-animation">&lt;h1&gt; Hello World &lt;/h1&gt;</h1>
-
   </body>
 </html>

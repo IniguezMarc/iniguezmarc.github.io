@@ -67,23 +67,15 @@ body {
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+
 }
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 
 .hidden {
   opacity: 0;
-  filter: blur(8px);
+  filter: blur(4px);
   transition: all 1s;
+  transition: 3s;
 }
 
 .show {
@@ -95,7 +87,7 @@ body {
 header {
   height: auto;
   padding-top: 50px;
-  width: fit-content;
+  width: max-content;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
@@ -121,12 +113,18 @@ a {
   text-align: left;
 }
 
-.sectionTitle {
+.sectionTitle-container {
   font-size: clamp(1rem, 4vw, 2rem);
   text-align: left;
   width: 80%;
   max-width: 700px;
   margin-top: 200px;
+}
+
+.sectionTitle {
+  font-size: clamp(1rem, 4vw, 2rem);
+  text-align: left;
+ 
 }
 
 .introductionText {
@@ -138,7 +136,7 @@ a {
 .box {
   background-color: var( --box-bg-color);
   width: 80%;
-  max-width: 700px;
+  max-width: 900px;
   margin-bottom: 100px;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -404,35 +402,15 @@ footer {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 0px;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(117, 117, 100, 0.782);
-  border-radius: 800%;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(117, 117, 100);
-}
-
-@media (max-width: 500px) {
-  ::-webkit-scrollbar-thumb {
-    width: 5px;
-  }
-}
 
 .rainElement {
   position: absolute;
   width: 20px;
   left: -20px;
+  z-index: -1;
 }
 
 @keyframes rainAnimation {
@@ -442,49 +420,10 @@ footer {
   }
   100% {
     opacity: 0;
-    left: 1000px;
+    left: 30vw;
   }
 }
 
-
-@media (max-width: 2000px) {
-  @keyframes rainAnimation {
-    0% {
-      opacity: 0.5;
-      left: -20px;
-    }
-    100% {
-      opacity: 0;
-      left: 300px;
-    }
-  }
-}
-
-@media (max-width: 1800px) {
-  @keyframes rainAnimation {
-    0% {
-      opacity: 0.5;
-      left: -20px;
-    }
-    100% {
-      opacity: 0;
-      left: 130px;
-    }
-  }
-}
-
-@media (max-width: 1400px) {
-  @keyframes rainAnimation {
-    0% {
-      opacity: 0.5;
-      left: -20px;
-    }
-    100% {
-      opacity: 0;
-      left: 100px;
-    }
-  }
-}
 
 @media (max-width: 1000px) {
   .rainElement {
@@ -514,106 +453,37 @@ nav{
 }
 }
 
-/* The switch - the box around the slider */
-.switch {
+/* The switch -  */
+.themeSwitch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: -50px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.themeSwitch img {
+ width: 300px;
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 /*typing animation*/
 
-#typing-animation{
-  position: absolute;
-  top: -200px;
-  border-right: solid 3px var(--font-color);
-  opacity: 0.15;
+.typing-animation{
   white-space: nowrap;
   width:fit-content;
-  height: 35px;
   overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 35px;
-  -ms-transform: rotate(-90deg); /* IE 9 */
-  transform: rotate(-90deg);
-}
-/*
-/* Animation */
-#typing-animation {
-  animation: animated-text 44s steps(22,end) 1s 1 normal both,
-             animated-cursor 1s steps(22,end) infinite;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
+  animation-name:animated-text ;
+  animation-direction: normal;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
 }
 
 /* text animation */
 
 @keyframes animated-text{
-  0%{width: 0; top: 200px;
-    right: 200px;}
-  50%{width:420px; top:420px;
-    right: 0px;
-  }
-  100%{width: 0; top: 200px;
-    right: 200px;}
+  0%{width: 0%;opacity: 1;
+    filter: blur(0);}
+  100%{width:100%;opacity: 1;
+    filter: blur(0);}
 }
 
 /* cursor animations */
