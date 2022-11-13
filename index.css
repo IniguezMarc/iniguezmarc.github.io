@@ -18,6 +18,8 @@
   --switch-bg-color:#ccc;
   --switch-toggle-color:white;
   --switch-bg-checked:#2196F3;
+  --svg1-stroke: #00000009;
+  --svg2-stroke: #00000015;
 }
 
 [data-theme="dark"] {
@@ -35,6 +37,8 @@
   --switch-bg-color:#ccc;
   --switch-toggle-color:white;
   --switch-bg-checked:#2196F3;
+  --svg1-stroke: #ffffff09;
+  --svg2-stroke: #ffffff15;
 }
 
 html,
@@ -199,36 +203,7 @@ a {
   margin-bottom: 40px;
 }
 
-@media (max-width: 769px) {
-  #fullStackImg {
-    margin-bottom: 70px;
-    transition: 1s;
-  }
-}
 
-@media (max-width: 749px) {
-  .v-align {
-    vertical-align: none;
-  }
-
-  #fullStackImg {
-    display: block;
-    height: 40vw;
-    max-width: 170px;
-    max-height: 170px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-  }
-
-  .profesionalText {
-    display: block;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-}
 
 .technologies {
   position: relative;
@@ -247,25 +222,7 @@ a {
   width: 22%;
 }
 
-@media (max-width: 753px) {
-  .tech {
-    width: 35%;
-    padding-left: 7%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    transition: 2s;
-  }
-}
 
-@media (max-width: 506px) {
-  .tech {
-    width: fit-content;
-    display: block;
-    font-size: large;
-    transition: 2s;
-  }
-}
 
 .projectLink {
   position: absolute;
@@ -280,19 +237,7 @@ a {
   margin-left: 50px;
 }
 
-@media (max-width: 420px) {
-  .projecTitle {
-    margin-left: 30px;
-    transition: 1s;
-  }
-}
 
-@media (max-width: 350px) {
-  .projecTitle {
-    margin-left: 10px;
-    transition: 1s;
-  }
-}
 
 .wsProject {
   position: relative;
@@ -370,33 +315,7 @@ footer {
   vertical-align: bottom;
 }
 
-@media (max-width: 1000px) {
-  .gmail {
-    display: none;
-  }
-}
 
-@media (max-width: 350px) {
-  .linkedin {
-    display: none;
-  }
-
-  .gmail {
-    display: none;
-  }
-}
-
-@media (max-width: 500px) {
-  .linkedin {
-    right: 20px;
-    transition: 1s;
-  }
-
-  .gmail {
-    right: 160px;
-    transition: 1s;
-  }
-}
 
 /*###### SCROLL BAR ######*/
 
@@ -413,27 +332,8 @@ footer {
   z-index: -1;
 }
 
-@keyframes rainAnimation {
-  0% {
-    opacity: 0.5;
-    left: -20px;
-  }
-  100% {
-    opacity: 0;
-    left: 30vw;
-  }
-}
 
 
-
-@media (max-width: 1200px) {
-  nav {
-    display: none;
-   }
-   .draw1{
-   display: none;
-  }
-}
 
 nav{
   text-align: right;
@@ -465,7 +365,59 @@ animation-iteration-count: 1;
 animation-fill-mode: forwards;
 }
 
-/* text animation */
+
+
+.draw1{
+  position: absolute;
+  top: 100px;
+  right: 10vw;
+  z-index: -1;
+}
+
+.draw1 svg{
+  width: 400px;
+  stroke: var(--svg1-stroke);
+  stroke-linecap:"round";
+   stroke-width:"47.256";
+}
+
+.draw1 .text{
+  stroke-dasharray: 9000;
+  stroke-dashoffset:9000;
+  animation: animate1 35s linear infinite forwards;
+}
+
+.draw2{
+  position: absolute;
+  top: 550px;
+  right: 1vw;
+  z-index: -1;
+}
+
+.draw2 svg{
+  width:300px;
+  stroke: var(--svg2-stroke);
+  stroke-width: 5px;
+}
+
+.draw2 .text{
+  stroke-dasharray: 90;
+  stroke-dashoffset:90;
+  animation: animate2 15s linear infinite forwards;
+}
+
+/* animations */
+
+@keyframes rainAnimation {
+  0% {
+    opacity: 0.25;
+    left: -20px;
+  }
+  100% {
+    opacity: 0;
+    left: 30vw;
+  }
+}
 
 @keyframes animated-text{
   0%{width: 0%;opacity: 1;
@@ -474,38 +426,148 @@ animation-fill-mode: forwards;
     filter: blur(0);}
 }
 
-/* cursor animations */
 
 @keyframes animated-cursor{
   from{border-right-color: var(--font-color);}
   to{border-right-color: transparent;}
 }
 
-.draw1{
-  position: absolute;
-  top: 150px;
-  right: 10vw;
-  z-index: -1;
-}
-
-.text{
-  stroke-dasharray: 9070;
-  stroke-dashoffset: 9070;
-  animation: animate1 40s linear infinite forwards;
-}
-
-.draw1 svg{
-  width: 400px;
-  stroke: #ffffff09;
-  stroke-linecap:"round";
-   stroke-width:"47.256";
-}
-
 @keyframes animate1 {
-0%{stroke-dashoffset: 9070;}
+0%{stroke-dashoffset: 9000;}
 20%{stroke-dashoffset: 0;}
-70%{stroke-dashoffset: 0;}
-90%{stroke-dashoffset: 9070;}
-100%{stroke-dashoffset: 9070;}
- 
+60%{stroke-dashoffset: 0;}
+80%{stroke-dashoffset: 9000;}
+100%{stroke-dashoffset: 9000;}
 }
+
+@keyframes animate2 {
+  0%{stroke-dashoffset: 90;}
+  10%{stroke-dashoffset: 0;}
+  70%{stroke-dashoffset: 0;}
+  80%{stroke-dashoffset: 90;}
+  100%{stroke-dashoffset: 90;}
+   
+  }
+/* media querys */
+
+  @media (max-width: 1200px) {
+    nav {
+      display: none;
+     }
+    }
+
+    @media (max-width: 1000px) {
+      .gmail {
+        display: none;
+      }
+    }
+
+    @media (max-width: 769px) {
+      #fullStackImg {
+        margin-bottom: 70px;
+        transition: 1s;
+      }
+    }
+
+    @media (max-height: 772px) {
+      .draw2 {
+        display: none;
+      }
+    }
+
+    @media (max-height: 500px) {
+      .draw1 {
+        display: none;
+      }
+    }
+
+    @media (max-width: 753px) {
+      .tech {
+        width: 35%;
+        padding-left: 7%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        transition: 2s;
+      }
+    }
+
+    @media (max-width: 749px) {
+      .v-align {
+        vertical-align: none;
+      }
+    
+      #fullStackImg {
+        display: block;
+        height: 40vw;
+        max-width: 170px;
+        max-height: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+    
+      .profesionalText {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      :root {
+        --svg1-stroke: #00000003;
+        --svg2-stroke: #00000006;
+      }
+      
+      [data-theme="dark"] {
+        --svg1-stroke: #ffffff03;
+        --svg2-stroke: #ffffff06;
+      }
+
+    }
+
+    @media (max-width: 350px) {
+      .linkedin {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 500px) {
+      .linkedin {
+        right: 20px;
+        transition: 1s;
+      }
+    
+      .gmail {
+        right: 160px;
+        transition: 1s;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .projecTitle {
+        margin-left: 30px;
+        transition: 1s;
+      }
+    }
+    
+    @media (max-width: 350px) {
+      .projecTitle {
+        margin-left: 10px;
+        transition: 1s;
+      }
+    }
+
+    @media (max-width: 506px) {
+      .tech {
+        width: fit-content;
+        display: block;
+        font-size: large;
+        transition: 2s;
+      }
+    }
+
+
+    
+
