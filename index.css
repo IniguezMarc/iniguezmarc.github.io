@@ -425,20 +425,13 @@ footer {
 }
 
 
-@media (max-width: 1000px) {
-  .rainElement {
-    display: none;
-  }
 
-  @keyframes rainAnimation {
-    0% {
-      opacity: 0;
-      left: 0px;
-    }
-    100% {
-      opacity: 0;
-      left: 0px;
-    }
+@media (max-width: 1200px) {
+  nav {
+    display: none;
+   }
+   .draw1{
+   display: none;
   }
 }
 
@@ -447,11 +440,6 @@ nav{
   height: 0;
 }
 
-@media (max-width: 1000px){
-  nav {
- display: none;
-}
-}
 
 /* The switch -  */
 .themeSwitch {
@@ -491,4 +479,33 @@ animation-fill-mode: forwards;
 @keyframes animated-cursor{
   from{border-right-color: var(--font-color);}
   to{border-right-color: transparent;}
+}
+
+.draw1{
+  position: absolute;
+  top: 150px;
+  right: 10vw;
+  z-index: -1;
+}
+
+.text{
+  stroke-dasharray: 9070;
+  stroke-dashoffset: 9070;
+  animation: animate1 40s linear infinite forwards;
+}
+
+.draw1 svg{
+  width: 400px;
+  stroke: #ffffff09;
+  stroke-linecap:"round";
+   stroke-width:"47.256";
+}
+
+@keyframes animate1 {
+0%{stroke-dashoffset: 9070;}
+20%{stroke-dashoffset: 0;}
+70%{stroke-dashoffset: 0;}
+90%{stroke-dashoffset: 9070;}
+100%{stroke-dashoffset: 9070;}
+ 
 }
