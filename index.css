@@ -12,12 +12,6 @@
   --box-shadow3:rgba(0, 0, 0, 0.12);
   --box-shadow4: rgba(0, 0, 0, 0.17);
   --box-shadow5:rgba(0, 0, 0, 0.09);
-  --scrollBar-track:rgba(0, 0, 0, 0);
-  --scrollBar-handler:rgba(117, 117, 100, 0.782);
-  --scrollBar-handler-hover:rgb(117, 117, 100);
-  --switch-bg-color:#ccc;
-  --switch-toggle-color:white;
-  --switch-bg-checked:#2196F3;
   --svg1-stroke: #00000009;
   --svg2-stroke: #00000015;
 }
@@ -31,12 +25,6 @@
   --box-shadow3:rgba(0, 0, 0, 0.12);
   --box-shadow4: rgba(0, 0, 0, 0.17);
   --box-shadow5:rgba(0, 0, 0, 0.09);
-  --scrollBar-track:rgba(0, 0, 0, 0);
-  --scrollBar-handler:rgba(117, 117, 100, 0.782);
-  --scrollBar-handler-hover:rgb(117, 117, 100);
-  --switch-bg-color:#ccc;
-  --switch-toggle-color:white;
-  --switch-bg-checked:#2196F3;
   --svg1-stroke: #ffffff09;
   --svg2-stroke: #ffffff15;
 }
